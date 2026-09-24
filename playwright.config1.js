@@ -34,7 +34,7 @@ const config =({
   use: {
     
         browserName: 'chromium',
-        headless: false,
+        headless: true,
         screenshot:'only-on-failure',
         video:'retain-on-failure',
         trace:'retain-on-failure'
