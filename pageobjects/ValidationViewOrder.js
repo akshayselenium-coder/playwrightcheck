@@ -17,7 +17,7 @@ class ValidationViewOrder
         
         console.log(order_IdDetails);
         expect(oid.includes(order_IdDetails)).toBeTruthy();
-        await this.page.pause();
+       // await this.page.pause();
    }
 }
 module.exports={ValidationViewOrder}
