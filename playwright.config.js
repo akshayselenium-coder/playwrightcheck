@@ -9,7 +9,7 @@ import { snapshot } from 'node:test';
  */
 const config =({
   testDir: './tests',
-  timeout: 50*1000,
+  timeout: 40*1000,
   retries :1,
   expect :{
     timeout: 40*1000,
