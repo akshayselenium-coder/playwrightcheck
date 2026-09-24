@@ -1,0 +1,4 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","20013","Playwright test for product ZARA COAT 3","","2026-09-24","passed","2026-09-24","","ClientAppPO.spec.js","",""
+"","2834","playwright test for single user","","2026-09-24","failed","2026-09-24","","ClientAppPO.spec.js","",""
+"","17911","Playwright test for product ADIDAS ORIGINAL","","2026-09-24","passed","2026-09-24","","ClientAppPO.spec.js","",""
