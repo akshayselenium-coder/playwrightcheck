@@ -93,5 +93,4 @@ test.only('playwright test for single user', async({page}) =>
     await loginPage.goTo();
    await loginPage.validLogin(data1.userName, data1.password);
 
-
 });
