@@ -146,6 +146,7 @@ test('@Web google search', async({browser, page}) => {
     {
           page.locator("//ul[@role='listbox']/li").nth(index).click();
           break;
+          
     }
  }
 
