@@ -6,7 +6,6 @@ const { text } = require('node:stream/consumers');
 test('First Playwright Test', async ({ browser, page }) => {
     const context = await browser.newContext();
     // const page = await context.newPage();
-    
     // await page.goto("https://rahulshettyacademy.com/angularpractice/");
     // await page.getByLabel("Check me out if you Love IceCreams!").click();
     // await page.getByLabel("Employed").click();
@@ -146,7 +145,7 @@ test('@Web google search', async({browser, page}) => {
     {
           page.locator("//ul[@role='listbox']/li").nth(index).click();
           break;
-          
+
     }
  }
 
