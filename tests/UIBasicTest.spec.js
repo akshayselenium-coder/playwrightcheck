@@ -46,7 +46,7 @@ const page1Promise = page.waitForEvent('popup');
 
 });
 
-test.only('Page Playwright Test', async ({ browser }) => {
+test('Page Playwright Test', async ({ browser }) => {
 
     const context = await browser.newContext();
     const page = await context.newPage();
@@ -128,6 +128,26 @@ test.only('Page Playwright Test', async ({ browser }) => {
 
 
     await page.pause();
+
+
+
+});
+test('@Web google search', async({browser, page}) => {
+   
+    const context = await browser.newContext();
+   await page.goto("https://www.google.com/");
+   await page.locator("//textarea[@class='gLFyf']").fill("akshay");
+   await page.locator("//ul[@role='listbox']/li").last().waitFor();
+ const data=  await page.locator("//ul[@role='listbox']/li").allTextContents();
+ const item="akshay kumar age";
+ for(const[index, check] of data.entries())
+ {
+    if(check.trim().toLowerCase().includes(item.toLowerCase()))
+    {
+          page.locator("//ul[@role='listbox']/li").nth(index).click();
+          break;
+    }
+ }
 
 
 
