@@ -6,7 +6,6 @@ const { text } = require('node:stream/consumers');
 test('First Playwright Test', async ({ browser, page }) => {
     const context = await browser.newContext();
     // const page = await context.newPage();
-    
     // await page.goto("https://rahulshettyacademy.com/angularpractice/");
     // await page.getByLabel("Check me out if you Love IceCreams!").click();
     // await page.getByLabel("Employed").click();
@@ -46,7 +45,7 @@ const page1Promise = page.waitForEvent('popup');
 
 });
 
-test.only('Page Playwright Test', async ({ browser }) => {
+test('Page Playwright Test', async ({ browser }) => {
 
     const context = await browser.newContext();
     const page = await context.newPage();
@@ -128,6 +127,26 @@ test.only('Page Playwright Test', async ({ browser }) => {
 
 
     await page.pause();
+
+
+
+});
+test('@Web google search', async({browser, page}) => {
+   
+    const context = await browser.newContext();
+   await page.goto("https://www.google.com/");
+   await page.locator("//textarea[@class='gLFyf']").fill("akshay");
+   await page.locator("//ul[@role='listbox']/li").last().waitFor();
+ const data=  await page.locator("//ul[@role='listbox']/li").allTextContents();
+ const item="akshay kumar age";
+ for(const[index, check] of data.entries())
+ {
+    if(check.trim().toLowerCase().includes(item.toLowerCase()))
+    {
+          page.locator("//ul[@role='listbox']/li").nth(index).click();
+          break;
+    }
+ }
 
 
 
