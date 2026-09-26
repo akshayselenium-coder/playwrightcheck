@@ -92,5 +92,6 @@ test.only('playwright test for single user', async({page}) =>
     const loginPage = await poManager.getLoginPageObject();
     await loginPage.goTo();
    await loginPage.validLogin(data1.userName, data1.password);
+   
 
 });
