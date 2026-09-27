@@ -85,7 +85,7 @@ test.only(`Playwright test for product ${data.productName}`, async ({ browser, p
 
 });}
 
-test('playwright test for single user', async({page}) => 
+test('@Web playwright test for single user', async({page}) => 
 {
   const data1=dataset[1];
      const poManager=new POManager(page);
