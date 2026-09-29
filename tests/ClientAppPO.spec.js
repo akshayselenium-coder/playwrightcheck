@@ -11,6 +11,7 @@ test('First Playwright Test', async ({ browser, page }) => {
     const context = await browser.newContext();
     // const page = await context.newPage();
 
+    
     // await page.goto("https://rahulshettyacademy.com/angularpractice/");
     // await page.getByLabel("Check me out if you Love IceCreams!").click();
     // await page.getByLabel("Employed").click();
