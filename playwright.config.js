@@ -10,7 +10,7 @@ import { snapshot } from 'node:test';
 const config =({
   testDir: './tests',
   timeout: 40*1000,
-  retries :1,
+ // retries :1,
   expect :{
     timeout: 40*1000,
   },
@@ -20,7 +20,7 @@ const config =({
   use: {
     
         browserName: 'chromium',
-        headless: true,
+        headless: false,
         screenshot:'only-on-failure',
         video:'retain-on-failure',
         trace:'retain-on-failure'
@@ -29,5 +29,6 @@ const config =({
   },
 
 });
-module.exports =config
+//module.exports =config
+export default config;
 
