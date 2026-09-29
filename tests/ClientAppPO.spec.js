@@ -12,6 +12,7 @@ const dataset=JSON.parse(JSON.stringify(require('../utils/TestData.json')));
 test('First Playwright Test', async ({ browser, page }) => {
     const context = await browser.newContext();
     // const page = await context.newPage();
+    
 
     // await page.goto("https://rahulshettyacademy.com/angularpractice/");
     // await page.getByLabel("Check me out if you Love IceCreams!").click();
@@ -22,7 +23,7 @@ test('First Playwright Test', async ({ browser, page }) => {
     // await page.getByText(" The Form has been submitted successfully!.").isVisible();
     // await page.getByRole("link",{name:"Shop"}).click();
     // await page.locator("app-card").filter({hasText: 'Nokia Edge'}).getByRole("button").click();
-    
+
     await page.goto("https://www.flipkart.com/");
     await page.locator("//span[@class='b3wTlE']").click();
     await page.locator("(//input[@class='nw1UBF v1zwn26'])[1]").fill("T-shirt");
