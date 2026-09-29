@@ -1,4 +1,5 @@
-const { LoginPage } = require('./LoginPage');
+//const { LoginPage } = require('./LoginPage');
+import  LoginPage  from './LoginPage';
 const { DashboardPage } = require('./DashboardPage');
 const { Checkout } = require('./Checkout');
 const { PlaceOrder } = require('./PlaceOrder');
@@ -33,4 +34,5 @@ class POManager {
         return this.validationViewOrderpage
     }
 }
-module.exports = { POManager }
+//module.exports = { POManager }
+export default POManager;
