@@ -1,8 +1,10 @@
-const { test, expect } = require('@playwright/test');
+//const { test, expect } = require('@playwright/test');
+import  {test, expect}  from '@playwright/test';
 const { timeLog } = require('node:console');
 const { TIMEOUT } = require('node:dns');
 const { text } = require('node:stream/consumers');
-const{POManager}=require('../pageobjects/POManager');
+import  POManager  from '../pageobjects/POManager';
+//const{POManager}=require('../pageobjects/POManager');
 //json=> string=> js object
 const dataset=JSON.parse(JSON.stringify(require('../utils/TestData.json')));
 
@@ -10,6 +12,7 @@ const dataset=JSON.parse(JSON.stringify(require('../utils/TestData.json')));
 test('First Playwright Test', async ({ browser, page }) => {
     const context = await browser.newContext();
     // const page = await context.newPage();
+    
 
     // await page.goto("https://rahulshettyacademy.com/angularpractice/");
     // await page.getByLabel("Check me out if you Love IceCreams!").click();
@@ -85,12 +88,15 @@ test.only(`Playwright test for product ${data.productName}`, async ({ browser, p
 
 });}
 
-test.only('playwright test for single user', async({page}) => 
+test('@Web playwright test for single user', async({page}) => 
 {
   const data1=dataset[1];
      const poManager=new POManager(page);
-    const loginPage = await poManager.getLoginPageObject();
+    const loginPage =  poManager.getLoginPageObject();
     await loginPage.goTo();
    await loginPage.validLogin(data1.userName, data1.password);
+   
+
+
 
 });

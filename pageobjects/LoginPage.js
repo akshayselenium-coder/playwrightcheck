@@ -18,4 +18,5 @@ class LoginPage
         await this.page.goto("https://rahulshettyacademy.com/client/");
      }
 }
-module.exports={LoginPage}
+//module.exports={LoginPage}
+export default LoginPage;
