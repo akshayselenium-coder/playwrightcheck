@@ -91,9 +91,11 @@ test('@Web playwright test for single user', async({page}) =>
 {
   const data1=dataset[1];
      const poManager=new POManager(page);
-    const loginPage = await poManager.getLoginPageObject();
+    const loginPage =  poManager.getLoginPageObject();
     await loginPage.goTo();
    await loginPage.validLogin(data1.userName, data1.password);
    
+
+
 
 });
