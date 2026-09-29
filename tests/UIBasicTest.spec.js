@@ -5,7 +5,7 @@ const { text } = require('node:stream/consumers');
 
 test('First Playwright Test', async ({ browser, page }) => {
     const context = await browser.newContext();
-    // const page = await context.newPage();
+    // const page = await context.newPage();//new7
     
     // await page.goto("https://rahulshettyacademy.com/angularpractice/");
     // await page.getByLabel("Check me out if you Love IceCreams!").click();
